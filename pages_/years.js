@@ -2,6 +2,7 @@ import Layout from "../components/Layout";
 import { NextSeo } from 'next-seo';
 import Link from 'next/link';
 import useTranslation from 'next-translate/useTranslation'
+import {Heading, Text} from "@chakra-ui/core";
 
 function Years() {
   const { t } = useTranslation()
@@ -28,69 +29,16 @@ function Years() {
 			<Layout>
 				
 				<section>
-					<h4>{ t('years:title') }</h4>
-				
+					<Heading as="h3">{ t('years:title') }</Heading>
+
+					<div className="contentCard">
 					<p>
 					<ul>
 						{yearItems}
 					</ul>
 					</p>
-				
+					</div>
 				</section>
-				
-				
-				<style jsx>{`
-					form {
-						border: 1px solid #151515;
-						margin-bottom: 25px;
-						-webkit-border-radius: 4px;
-						-moz-border-radius: 4px;
-						border-radius: 4px;
-						vertical-align:middle;
-					}
-					fieldset {
-						border:0;	
-					}
-					
-					p {
-						margin-bottom: 15px;	
-					}
-					
-					button {
-						background: #1a8b73;
-						margin-bottom: 25px;
-						-webkit-border-radius: 4px;
-						-moz-border-radius: 4px;
-						padding: 12px;
-						font-size:15px;
-						border:0;
-						color:#fff;
-						cursor: pointer;
-					}
-					
-					.button {
-						background: #1a8b73;
-						margin-bottom: 25px;
-						-webkit-border-radius: 4px;
-						-moz-border-radius: 4px;
-						padding: 12px;
-						font-size:15px;
-						border:0;
-						color:#fff;
-						cursor: pointer;
-					}
-					
-					section {
-						
-					}
-					
-					hr {
-						border: 1px solid #151515;
-						width: 25%;
-						margin: 15px auto;		
-					}
-					
-			    `}</style>
 			</Layout>
 		</>
 	);

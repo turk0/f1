@@ -33,6 +33,7 @@ h1 {
 	font-family: "LeagueSpartan";
 	text-transform: uppercase;
 	letter-spacing: 3px;
+	font-weight: bold;
 }
 
 h2 {
@@ -41,18 +42,22 @@ h2 {
 	letter-spacing: 2px;
 	font-size: 11px;
 	font-family: "LeagueSpartan";
+	font-weight: bold;
 }
 
 h3 {
-	font-size: 20px;
+	font-size: 20px !important;
 	text-transform: uppercase;
-	font-family: "LeagueSpartan";
+	font-family: "LeagueSpartan" !important;
+	margin-bottom:15px !important;
+	font-weight: bold !important;
 }
 
 h4 {
 	font-size: 16px;
 	text-transform: uppercase;
 	font-family: "LeagueSpartan";
+	font-weight: bold;
 }
 
 a {
@@ -102,6 +107,87 @@ p a:hover {
 	margin: 0 auto;
 	padding: 0 16px;
 }
+
+.contentCard {
+	background: #151515;
+	margin: 20px auto 0 auto;
+	border-radius: 3px 3px 3px 3px;
+	-moz-border-radius: 3px 3px 3px 3px;
+	-webkit-border-radius: 3px 3px 3px 3px;
+	padding: 20px 25px;
+
+
+
+	fieldset {
+		border:0;
+		margin:0 0 20px 0;
+		padding:0;
+		vertical-align:middle;
+	}
+
+	fieldset label {
+		padding-left:5px;
+	}
+	fieldset label a {
+		color: #1a8b73;
+	}
+
+	p {
+		margin-bottom: 15px;
+	}
+
+	input {
+		color:#000;
+	}
+
+	p ul {
+		margin-left: 15px;
+	}
+
+	.copyable {
+		font-family:monospace;
+		color:#2a2a2a;
+		background:#FFF;
+		padding:.5em;
+		border-radius:4px;
+		margin-top:.5em;
+		width:100%;
+	}
+
+	button {
+		background: #1a8b73;
+		-webkit-border-radius: 4px;
+		-moz-border-radius: 4px;
+		padding: 12px 15px;
+		font-size:15px;
+		border:0;
+		color:#fff;
+		cursor: pointer;
+	}
+
+	.button {
+		background: #1a8b73;
+		-webkit-border-radius: 4px;
+		-moz-border-radius: 4px;
+		padding: 12px 15px;
+		font-size:15px;
+		border:0;
+		color:#fff;
+		cursor: pointer;
+	}
+
+	section {
+
+	}
+
+	hr {
+		border: 1px solid #151515;
+		width: 25%;
+		margin: 15px auto;
+	}
+
+}
+
 
 @media screen and (max-width: 500px) {
 	.main-content {

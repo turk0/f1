@@ -1,9 +1,9 @@
 import Layout from "../components/Layout";
 import {NextSeo} from 'next-seo';
 import Link from 'next/link';
-
 const moment = require('moment-timezone')
 import useTranslation from 'next-translate/useTranslation'
+import {Heading, Text} from "@chakra-ui/core";
 
 function Timezones() {
     const {t, lang} = useTranslation()
@@ -29,39 +29,14 @@ function Timezones() {
                 keywords={metaKeywords}
             />
             <Layout>
-                    <h3>{t('timezones:title')}</h3>
-                <section className="card">
+                    <Heading as="h3">{t('timezones:title')}</Heading>
+                <section className="contentCard">
                     <p>
                         <ul>
                             {timezoneItems}
                         </ul>
                     </p>
                 </section>
-
-                <style jsx>{`
-					a {
-						color:#1a8b73;
-					}
-					
-					.card {
-						background:#141414;
-						-webkit-border-radius: 15px;
-						-moz-border-radius: 15px;
-						padding:25px 25px 10px 25px;
-						margin-bottom:16px;
-					}
-					
-					.card ul {
-					    list-style:none;
-					    margin:0;
-					    padding: 0;
-					}
-					
-					.card p {
-						margin-bottom:15px;
-					}
-					
-			    `}</style>
             </Layout>
         </>
     );

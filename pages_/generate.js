@@ -2,6 +2,7 @@ import {useState} from 'react'
 import Layout from "../components/Layout";
 import { NextSeo } from 'next-seo';
 import useTranslation from 'next-translate/useTranslation'
+import {Heading, Text} from "@chakra-ui/core";
 
 function Generate(props) {
   const { t, lang } = useTranslation()
@@ -66,9 +67,9 @@ function Generate(props) {
 			<Layout year={ props.year }>
 				{form.submitted ?
 					<>	
-						<h3>{ t('generate:download.title') }</h3>	
+						<Heading as="h3" size="lg">{ t('generate:download.title') }</Heading>
 										
-						<section className="card" id="download_option_ical">							
+						<section className="contentCard" id="download_option_ical">
 							<h4>{ t('generate:download.webcalTitle') }</h4>
 							<p>{ t('generate:download.webcalDescription') }</p>
 							
@@ -79,13 +80,13 @@ function Generate(props) {
 							</p>
 						</section>
 						
-						<section className="card" id="download_option_google">
+						<section className="contentCard" id="download_option_google">
 							<h4>{ t('generate:download.gcalTitle') }</h4>
 							<p>{ t('generate:download.gcalDescription') } (<a href="https://support.google.com/calendar/answer/37100" target="_blank">{ t('generate:download.gcalDescriptionLink') }</a>):</p>
 							<p className="copyable">{form.googleURL}</p>
 						</section>
 												
-						<section className="card" id="download_option">
+						<section className="contentCard" id="download_option">
 							<h4>{ t('generate:download.icsTitle') }</h4>
 							<p>{ t('generate:download.icsDescription') }</p>		
 							<p>					
@@ -98,10 +99,10 @@ function Generate(props) {
 				:				
 					<>
 						<h3>{ t('generate:form.title') }</h3>
-						<section className="card">
+						<section className="contentCard">
 							<p>{ t('generate:form.description') }</p>
-							
-							<form id="download_subscribe" onSubmit={handleOnSubmit}>	
+
+							<form id="download_subscribe" onSubmit={handleOnSubmit}>
 								<fieldset>
 									<div className="field">
 										<input type="checkbox" name="p1" id="p1" defaultValue="on" defaultChecked="checked" onChange={event => setState({...form, p1: event.target.checked })} />
@@ -147,87 +148,6 @@ function Generate(props) {
 						</section>
 					</>
 				}
-				<style jsx>{`
-					.card {
-						background:#141414;
-						-webkit-border-radius: 15px;
-						-moz-border-radius: 15px;
-						padding:25px 25px 10px 25px;
-						margin-bottom:16px;
-					}
-					.card h4 {
-						margin-top:0;
-						font-size:18px;
-						margin-bottom:8px;
-					}
-					.card p {
-						margin-bottom:15px;
-					}
-					
-					
-					form {
-					}
-					fieldset {
-						border:0;
-						margin:0 0 20px 0;
-						padding:0;	
-  					vertical-align:middle;
-					}
-					
-					fieldset label {
-  					padding-left:5px;
-					}
-					fieldset label a {
-  				  	color: #1a8b73;
-					}
-					
-					p {
-						margin-bottom: 15px;	
-					}
-					
-					.copyable {
-						font-family:monospace;
-						color:#2a2a2a;
-						background:#FFF;
-						padding:.5em;
-						border-radius:4px;
-						margin-top:.5em;
-						width:100%;
-					}
-					
-					button {
-						background: #1a8b73;
-						-webkit-border-radius: 4px;
-						-moz-border-radius: 4px;
-						padding: 12px 15px;
-						font-size:15px;
-						border:0;
-						color:#fff;
-						cursor: pointer;
-					}
-					
-					.button {
-						background: #1a8b73;
-						-webkit-border-radius: 4px;
-						-moz-border-radius: 4px;
-						padding: 12px 15px;
-						font-size:15px;
-						border:0;
-						color:#fff;
-						cursor: pointer;
-					}
-					
-					section {
-						
-					}
-					
-					hr {
-						border: 1px solid #151515;
-						width: 25%;
-						margin: 15px auto;		
-					}
-					
-			    `}</style>
 			</Layout>
 		</>
 	);

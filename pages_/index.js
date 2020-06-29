@@ -3,7 +3,6 @@ import Races from '../components/Races';
 import { NextSeo } from 'next-seo';
 import RaceSchema from '../components/RaceSchema';
 import useTranslation from 'next-translate/useTranslation'
-import Subscribe from "../components/Subscribe";
 import OptionsBar from "../components/OptionsBar";
 import React from "react";
 

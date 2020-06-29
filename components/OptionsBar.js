@@ -1,6 +1,5 @@
-import {useState, useContext} from 'react';
 import UserContext from '../components/UserContext';
-import Link from 'next/link';
+import {Select, Stack, Button} from "@chakra-ui/core";
 
 const moment = require('moment-timezone')
 import styles from './OptionsBar.module.scss'
@@ -70,35 +69,30 @@ class OptionsBar extends React.Component {
 
         return (
             <div className={styles.options}>
-                <div className={styles.bar}>
-                    {this.state.pickerShowing ?
-                        <div className={styles.picker}>
-                            <form action="/" method="GET" id="timezone-picker">
-                                <label htmlFor="timezone"
-                                       className={styles.pickerLabel}>{t('common:options.timezonePicker.pick')}</label>
-                                <select id="timezone" onChange={this.onChange} name="timezone"
-                                        value={this.context.timezone}>
-                                    {timezoneItems}
-                                </select>
-
-                                <button onClick={this.togglePicker}
-                                        type="submit">{t('common:options.timezonePicker.button')}</button>
-                                <noscript><style>{`#timezone-picker { display:none; } `}</style></noscript>
-                            </form>
-                            <noscript>
-                                <a href="/timezones">{t('common:options.timezonePicker.pick')}</a>
-                            </noscript>
+                {this.state.pickerShowing ?
+                    <Stack spacing={16} marginLeft={4} justify="start" align="center" className={styles.picker} isInline>
+                        <label htmlFor="timezone"
+                               className={styles.pickerLabel}>{t('common:options.timezonePicker.pick')}</label>
+                        <Select id="timezone" name="timezone" size={"sm"} value={this.context.timezone}
+                                onChange={this.onChange} rootProps={{minW: "250px", maxW: "350px", m:"0px", ml:"8px", mr:"16px"}} iconColor="black" className={styles.pickerSelect}>
+                            {timezoneItems}
+                        </Select>
+                        <Button variantColor="white" size="sm" margin={0} onClick={this.togglePicker}>
+                            {t('common:options.timezonePicker.button')}
+                        </Button>
+                        <noscript>
+                            <style>{`#timezone-picker { display:none; } `}</style>
+                        </noscript>
+                    </Stack>
+                    :
+                    <div className={styles.options}>
+                        <div className={styles.currentTimezone}>
+                            <a onClick={this.togglePicker}>
+                                {t('common:options.timezonePicker.showing')} <strong>{this.context.timezone && this.context.timezone.replace("_", " ")}</strong>.
+                            </a>
                         </div>
-                        :
-                        <div className={styles.options}>
-                            <div className={styles.currentTimezone}>
-                                <a onClick={this.togglePicker}>
-                                    {t('common:options.timezonePicker.showing')} <strong>{this.context.timezone && this.context.timezone.replace("_", " ")}</strong>.
-                                </a>
-                            </div>
-                        </div>
-                    }
-                </div>
+                    </div>
+                }
             </div>
         );
     }
