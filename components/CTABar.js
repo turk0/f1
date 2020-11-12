@@ -1,8 +1,7 @@
 import React, {useState, useContext} from 'react';
-import Link from 'next-translate/Link'
+import Link from 'next/link'
 import styles from './CTABar.module.scss'
 import withTranslation from 'next-translate/withTranslation'
-import fixHref from 'next-translate/fixHref'
 import {Col, Row} from "react-grid-system"
 
 class CTABar extends React.Component {

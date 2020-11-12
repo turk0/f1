@@ -4,15 +4,23 @@ import { NextSeo } from 'next-seo';
 import RaceSchema from '../components/RaceSchema';
 import useTranslation from 'next-translate/useTranslation'
 import OptionsBar from "../components/OptionsBar";
-import React from "react";
+import React, { useState } from 'react';
+import { useRouter } from 'next/router'
+import dayjs from 'dayjs';
+import dayjsutc from 'dayjs/plugin/utc';
+import dayjstimezone from 'dayjs/plugin/timezone';
+import UserContext from '../components/UserContext';
 
-const Index = (props) => {
+export default function GsspPage(props) {
 	const { t, lang } = useTranslation()
 	const title = t('common:title')
 	const subtitle = t('common:subtitle')
 
 	const metaDescription = t('common:meta.description', { year: props.year })
 	const metaKeywords = t('common:meta.keywords', { year: props.year })
+
+	dayjs.extend(dayjsutc)
+	dayjs.extend(dayjstimezone)
 
 	return (
 		<>
@@ -31,19 +39,18 @@ const Index = (props) => {
 				})}
 			</Layout>
 		</>
-	);
+	)
 }
 
-Index.getInitialProps = async ({query: {timezone}, res}) => {
+export const getServerSideProps = async ctx => {
 	const currentYear = '2020';
 
 	const data = await import(`../db/`+currentYear+`.json`)
 
 	return {
-		year: currentYear,
-		races: data.races,
-		virtual: data.virtual
+		props: {
+			year: currentYear,
+			races: data.races
+		},
 	}
 }
-
-export default Index;

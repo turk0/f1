@@ -1,5 +1,5 @@
 {
-  "allLanguages": [
+  "locales": [
     "cs",
     "da",
     "de",
@@ -39,7 +39,7 @@
     "uk": "Українська",
     "zh": "中文"
   },
-  "defaultLanguage": "en",
+  "defaultLocale": "en",
   "currentPagesDir": "pages_",
   "finalPagesDir": "pages",
   "localesPath": "locales",

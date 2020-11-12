@@ -1,5 +1,6 @@
 const withFonts = require('next-fonts')
 const withPWA = require("next-pwa")
+const { locales, defaultLocale } = require('./i18n.json')
 
 const {
   PHASE_DEVELOPMENT_SERVER,
@@ -24,6 +25,7 @@ module.exports = (phase) => {
     pwa: {
       disable: !isProd,
       dest: "public"
-    }
+    },
+    i18n: { locales, defaultLocale }
   }))
 }
