@@ -28,6 +28,10 @@ class Header extends React.Component {
             adjustedURL = "/timezones/"
         }
 
+        if(adjustedURL.includes("[year]")){
+            adjustedURL = "/years/"
+        }
+
 
         Router.push(adjustedURL, adjustedURL, { locale: event.target.value });
     }

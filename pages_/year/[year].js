@@ -63,7 +63,7 @@ export const getStaticPaths = async () => {
 			{ params: { year: '2019' } },
 			{ params: { year: '2018' } }
 		],
-		fallback: false,
+		fallback: true,
 	})
 }
 
