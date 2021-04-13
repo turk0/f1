@@ -7,9 +7,45 @@
 			"longitude": 55.512081,
 			"round": 1,
 			"slug": "euro-turkey-vs-italy",
-			"localeKey": "euro-turkey-vs-italy",
+			"localeKey": "euro-turkey-italy",
 			"sessions": {
 				"match": "2021-06-11T20:00:00Z"
+			}
+		}
+		,{
+			"name": "Wales v Switzerland",
+			"location": "Bakı Olimpiya Stadionu, Baku",
+			"latitude": 25.31319,
+			"longitude": 55.512081,
+			"round": 1,
+			"slug": "euro-wales-switzerland",
+			"localeKey": "euro-wales-switzerland",
+			"sessions": {
+				"match": "2021-06-12T14:00:00Z"
+			}
+		}
+		,{
+			"name": "Denmark v Finland",
+			"location": "Parken, Copenhagen",
+			"latitude": 25.31319,
+			"longitude": 55.512081,
+			"round": 1,
+			"slug": "euro-denmark-finland",
+			"localeKey": "euro-denmark-finland",
+			"sessions": {
+				"match": "2021-06-12T17:00:00Z"
+			}
+		}
+		,{
+			"name": "Belgium v Russia",
+			"location": "Gazprom Arena, St Petersburg",
+			"latitude": 25.31319,
+			"longitude": 55.512081,
+			"round": 1,
+			"slug": "euro-belgium-russia",
+			"localeKey": "euro-belgium-russia",
+			"sessions": {
+				"match": "2021-06-12T20:00:00Z"
 			}
 		}
 	]
