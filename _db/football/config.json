@@ -1,0 +1,16 @@
+{
+	"siteKey": "football",
+	"url": "footballcal.com",
+	"availableYears": [2021],
+	"sessions": ["match"],
+	"featuredSessions": ["match"],
+	"collapsedSessions": [],
+	"sessionMap": {
+		"match": "match"
+	},
+	"sessionLengths": {
+		"match": 120
+	},
+	"supportsEmailReminders": false,
+	"notice": "Races marked with TBC are showing placeholder times. Calendar will be updated as details are confirmed."
+}

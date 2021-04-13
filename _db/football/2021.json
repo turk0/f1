@@ -1,0 +1,16 @@
+{
+	"races": [
+		{
+			"name": "Turkey v Italy",
+			"location": "Rome",
+			"latitude": 25.31319,
+			"longitude": 55.512081,
+			"round": 1,
+			"slug": "euro-turkey-vs-italy",
+			"localeKey": "euro-turkey-vs-italy",
+			"sessions": {
+				"match": "2021-06-11T20:00:00Z"
+			}
+		}
+	]
+}
