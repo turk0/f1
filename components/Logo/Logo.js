@@ -224,6 +224,6 @@ export default function Logo() {
 				
 			);
 		default:
-			return <div></div>;
+			return <div>Add Logo</div>;
 	}
 }
