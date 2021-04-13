@@ -10,7 +10,8 @@
 			"localeKey": "euro-turkey-italy",
 			"sessions": {
 				"match": "2021-06-11T20:00:00Z"
-			}
+			},
+			"tags": ["Group Stages","Group A","Turkey","Italy"]
 		}
 		,{
 			"name": "Wales v Switzerland",
@@ -22,7 +23,8 @@
 			"localeKey": "euro-wales-switzerland",
 			"sessions": {
 				"match": "2021-06-12T14:00:00Z"
-			}
+			},
+			"tags": ["Group Stages","Group A","Wales","Switzerland"]
 		}
 		,{
 			"name": "Denmark v Finland",
@@ -34,7 +36,8 @@
 			"localeKey": "euro-denmark-finland",
 			"sessions": {
 				"match": "2021-06-12T17:00:00Z"
-			}
+			},
+			"tags": ["Group Stages","Group B","Denmark","Finland"]
 		}
 		,{
 			"name": "Belgium v Russia",
@@ -46,7 +49,8 @@
 			"localeKey": "euro-belgium-russia",
 			"sessions": {
 				"match": "2021-06-12T20:00:00Z"
-			}
+			},
+			"tags": ["Group Stages","Group B","Belgium","Russia"]
 		}
 	]
 }
